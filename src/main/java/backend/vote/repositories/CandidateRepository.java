@@ -14,5 +14,5 @@ public interface CandidateRepository extends JpaRepository<Candidate, Long> {
 
   public List<Candidate> findByNameContaining(String name);
 
-  public List<Candidate> findByPartyNameContaining(Long name);
+  public List<Candidate> findByPartyNameContaining(String name);
 }

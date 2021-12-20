@@ -16,7 +16,7 @@ public interface ElectionService {
 
   public Election findElectionByCandidateId(Long id);
 
-  public void incrementVoteCountByCandidateId(Long id);
+  public void incrementVoteCountOfCandidateId(Long id);
 
   public void addElection(Election election);
 

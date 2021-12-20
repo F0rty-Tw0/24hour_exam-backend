@@ -8,7 +8,7 @@ public interface CandidateService {
 
   public List<Candidate> findCandidatesByNameContaining(String name);
 
-  public List<Candidate> findCandidatesByPartyNameContaining(Long name);
+  public List<Candidate> findCandidatesByPartyNameContaining(String name);
 
   public Candidate findCandidateById(Long id);
 

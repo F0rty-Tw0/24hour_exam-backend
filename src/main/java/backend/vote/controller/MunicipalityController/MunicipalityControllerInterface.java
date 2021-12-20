@@ -45,7 +45,7 @@ public interface MunicipalityControllerInterface {
   );
 
   @ApiOperation(
-    value = " - Returns the Municipality by the Id",
+    value = " - Returns the Municipality by the id",
     // authorizations = { @Authorization(value = "jwtToken") },
     notes = "Enter the <b>id</b> of a Municipality to retrieve a <b>Municipality</b> Object."
   )

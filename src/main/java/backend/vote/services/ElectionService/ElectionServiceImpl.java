@@ -49,7 +49,7 @@ public class ElectionServiceImpl implements ElectionService {
   }
 
   @Override
-  public void incrementVoteCountByCandidateId(Long id) {
+  public void incrementVoteCountOfCandidateId(Long id) {
     Election election = electionRepository
       .findByCandidateId(id)
       .orElseThrow(

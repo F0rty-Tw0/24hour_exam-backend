@@ -25,7 +25,7 @@ public class CandidateServiceImpl implements CandidateService {
   }
 
   @Override
-  public List<Candidate> findCandidatesByPartyNameContaining(Long name) {
+  public List<Candidate> findCandidatesByPartyNameContaining(String name) {
     return candidateRepository.findByPartyNameContaining(name);
   }
 
