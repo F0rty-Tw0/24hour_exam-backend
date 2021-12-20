@@ -24,7 +24,7 @@ public class ElectionController implements ElectionControllerInterface {
   }
 
   @Override
-  public Election findElectionByDate(LocalDate date) {
+  public List<Election> findElectionByDate(LocalDate date) {
     return electionService.findElectionByDate(date);
   }
 

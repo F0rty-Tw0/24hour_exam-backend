@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 public interface CandidateRepository extends JpaRepository<Candidate, Long> {
   public Optional<Candidate> findById(Long id);
 
-  public Optional<Candidate> findByPartyId(Long id);
+  public List<Candidate> findByPartyId(Long id);
 
   public List<Candidate> findByNameContaining(String name);
 

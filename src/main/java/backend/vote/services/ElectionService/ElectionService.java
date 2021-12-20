@@ -10,7 +10,7 @@ public interface ElectionService {
 
   public List<Election> findElectionByCandidateNameContaining(String name);
 
-  public Election findElectionByDate(LocalDate date);
+  public List<Election> findElectionByDate(LocalDate date);
 
   public Election findElectionById(Long id);
 

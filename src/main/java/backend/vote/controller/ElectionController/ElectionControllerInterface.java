@@ -5,6 +5,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.time.LocalDate;
 import java.util.List;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -53,7 +54,9 @@ public interface ElectionControllerInterface {
   // @PreAuthorize(
   //   "hasRole('ADMIN') or hasRole('CANDIDATE')"
   // )
-  public Election findElectionByDate(@PathVariable LocalDate date);
+  public List<Election> findElectionByDate(
+    @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date
+  );
 
   @ApiOperation(
     value = " - Returns the Elections by the id",

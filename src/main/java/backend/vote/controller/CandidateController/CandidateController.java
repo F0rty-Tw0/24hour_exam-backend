@@ -33,8 +33,8 @@ public class CandidateController implements CandidateControllerInterface {
   }
 
   @Override
-  public Candidate findCandidateByPartyId(Long id) {
-    return candidateService.findCandidateByPartyId(id);
+  public List<Candidate> findCandidatesByPartyId(Long id) {
+    return candidateService.findCandidatesByPartyId(id);
   }
 
   @Override

@@ -37,12 +37,8 @@ public class CandidateServiceImpl implements CandidateService {
   }
 
   @Override
-  public Candidate findCandidateByPartyId(Long id) {
-    return candidateRepository
-      .findByPartyId(id)
-      .orElseThrow(
-        () -> new IllegalArgumentException("Invalid party id:" + id)
-      );
+  public List<Candidate> findCandidatesByPartyId(Long id) {
+    return candidateRepository.findByPartyId(id);
   }
 
   @Override

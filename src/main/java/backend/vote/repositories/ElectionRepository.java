@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 public interface ElectionRepository extends JpaRepository<Election, Long> {
   public Optional<Election> findById(Long id);
 
-  public Optional<Election> findByDate(LocalDate date);
+  public List<Election> findByDate(LocalDate date);
 
   public Optional<Election> findByCandidateId(Long id);
 

@@ -26,10 +26,8 @@ public class ElectionServiceImpl implements ElectionService {
   }
 
   @Override
-  public Election findElectionByDate(LocalDate date) {
-    return electionRepository
-      .findByDate(date)
-      .orElseThrow(() -> new IllegalArgumentException("election not found"));
+  public List<Election> findElectionByDate(LocalDate date) {
+    return electionRepository.findByDate(date);
   }
 
   @Override

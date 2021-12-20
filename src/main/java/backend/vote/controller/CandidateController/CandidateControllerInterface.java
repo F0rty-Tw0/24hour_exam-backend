@@ -49,7 +49,7 @@ public interface CandidateControllerInterface {
     // authorizations = { @Authorization(value = "jwtToken") },
     notes = "Enter the <b>name</b> of a Party to retrieve a list of <b>Candidates</b>."
   )
-  @GetMapping("/party/{name}")
+  @GetMapping("/party-name/{name}")
   // @PreAuthorize(
   //   "hasRole('ADMIN') or hasRole('CANDIDATE')"
   // )
@@ -77,7 +77,7 @@ public interface CandidateControllerInterface {
   // @PreAuthorize(
   //   "hasRole('ADMIN') or hasRole('CANDIDATE')"
   // )
-  public Candidate findCandidateByPartyId(@PathVariable Long id);
+  public List<Candidate> findCandidatesByPartyId(@PathVariable Long id);
 
   @ApiOperation(
     value = " - Adds a Candidate to the database",
@@ -116,5 +116,5 @@ public interface CandidateControllerInterface {
   // @PreAuthorize(
   //   "hasRole('ADMIN') or hasRole('CANDIDATE')"
   // )
-  public void deleteCandidateById(Long id);
+  public void deleteCandidateById(@PathVariable Long id);
 }

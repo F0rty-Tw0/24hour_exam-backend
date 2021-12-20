@@ -12,7 +12,7 @@ public interface CandidateService {
 
   public Candidate findCandidateById(Long id);
 
-  public Candidate findCandidateByPartyId(Long id);
+  public List<Candidate> findCandidatesByPartyId(Long id);
 
   public void addCandidate(Candidate candidate);
 
