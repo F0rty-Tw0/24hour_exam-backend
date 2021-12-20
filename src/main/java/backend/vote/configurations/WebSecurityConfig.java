@@ -14,16 +14,19 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(
-  prePostEnabled = true
-)
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
   @Bean
   CorsConfigurationSource corsConfigurationSource() {
     CorsConfiguration configuration = new CorsConfiguration();
 
-    configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000"));
+    configuration.setAllowedOrigins(
+      Arrays.asList(
+        "http://localhost:3000",
+        "https://24hour-exam-frontend.vercel.app/"
+      )
+    );
     configuration.setAllowedMethods(
       Arrays.asList("GET", "POST", "PATCH", "DELETE", "PUT")
     );
