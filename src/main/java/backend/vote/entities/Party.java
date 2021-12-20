@@ -1,11 +1,13 @@
 package backend.vote.entities;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,7 +30,7 @@ public class Party {
 
   @Column(unique = true)
   private String abbreviation;
-  
-  // @ManyToMany
-  // private Municipality municipality;
+
+  @ManyToMany
+  private Set<Municipality> municipalities;
 }

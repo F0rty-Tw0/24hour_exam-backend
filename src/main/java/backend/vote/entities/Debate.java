@@ -24,8 +24,8 @@ import lombok.Setter;
       columnNames = { "candidate_id", "date" }
     ),
   },
-  name = "vote_records",
-  schema = "easyvote"
+  name = "debates",
+  schema = "vote"
 )
 public class Debate {
 
@@ -37,7 +37,7 @@ public class Debate {
   @OneToOne
   private Candidate candidate;
 
-  private int voteCount;
+  private int votes;
 
   @Column(unique = true)
   private LocalDate date;
