@@ -121,6 +121,8 @@ public class DatabaseConfig implements CommandLineRunner {
     }
   }
 
+
+  //TODO: ADD MUNICIPALITY TO PARTY
   @Override
   public void run(String... args) throws Exception {
     createDanishMunicipalities();
