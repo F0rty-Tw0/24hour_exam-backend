@@ -6,7 +6,7 @@ import java.util.List;
 public interface PartyService {
   public List<Party> findAllParties();
 
-  public List<Party> findByPartyNameContaining(String name);
+  public List<Party> findPartyByNameContaining(String name);
 
   public Party findPartyById(Long id);
 

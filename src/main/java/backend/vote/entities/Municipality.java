@@ -1,12 +1,10 @@
 package backend.vote.entities;
 
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,9 +29,6 @@ public class Municipality {
 
   @Column(nullable = false)
   private String name;
-
-  @ManyToMany
-  private Set<Party> party;
 
   public Municipality(Long code, String name) {
     this.code = code;

@@ -1,7 +1,6 @@
 package backend.vote.entities;
 
 import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,6 +26,8 @@ public class Party {
 
   @Column(nullable = false)
   private String name;
+
+  private String slogan;
 
   @Column(unique = true)
   private String abbreviation;
