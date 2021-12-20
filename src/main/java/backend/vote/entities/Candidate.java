@@ -26,6 +26,8 @@ public class Candidate {
   @Column(nullable = false)
   private String name;
 
+  private String slogan;
+
   @ManyToOne
   private Party party;
 }
