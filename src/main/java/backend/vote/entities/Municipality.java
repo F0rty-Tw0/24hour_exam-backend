@@ -25,12 +25,12 @@ public class Municipality {
   private Long id;
 
   @Column(nullable = false)
-  private Long code;
+  private int code;
 
   @Column(nullable = false)
   private String name;
 
-  public Municipality(Long code, String name) {
+  public Municipality(int code, String name) {
     this.code = code;
     this.name = name;
   }

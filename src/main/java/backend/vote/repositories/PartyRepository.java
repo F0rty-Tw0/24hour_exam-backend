@@ -10,5 +10,7 @@ import org.springframework.stereotype.Repository;
 public interface PartyRepository extends JpaRepository<Party, Long> {
   public Optional<Party> findById(Long id);
 
+  public Optional<Party> findByAbbreviation(String abbreviation);
+
   public List<Party> findByNameContaining(String name);
 }

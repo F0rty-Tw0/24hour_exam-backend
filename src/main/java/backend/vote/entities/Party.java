@@ -34,4 +34,10 @@ public class Party {
 
   @ManyToMany
   private Set<Municipality> municipalities;
+
+  public Party(String name, String abbreviation, String slogan) {
+    this.name = name;
+    this.abbreviation = abbreviation;
+    this.slogan = slogan;
+  }
 }

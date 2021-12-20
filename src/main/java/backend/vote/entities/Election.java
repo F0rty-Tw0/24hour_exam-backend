@@ -24,10 +24,10 @@ import lombok.Setter;
       columnNames = { "candidate_id", "date" }
     ),
   },
-  name = "debates",
+  name = "elections",
   schema = "vote"
 )
-public class Debate {
+public class Election {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,10 +39,9 @@ public class Debate {
 
   private int votes;
 
-  @Column(unique = true)
   private LocalDate date;
 
-  public Debate(Candidate candidate, LocalDate date) {
+  public Election(Candidate candidate, LocalDate date) {
     this.candidate = candidate;
     this.date = date;
   }

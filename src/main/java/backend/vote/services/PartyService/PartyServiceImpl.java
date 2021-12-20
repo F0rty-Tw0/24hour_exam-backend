@@ -32,6 +32,15 @@ public class PartyServiceImpl implements PartyService {
   }
 
   @Override
+  public Party findPartyByAbbreviation(String abbreviation) {
+    return partyRepository
+      .findByAbbreviation(abbreviation)
+      .orElseThrow(
+        () -> new IllegalArgumentException(notFoundMessage + abbreviation)
+      );
+  }
+
+  @Override
   public void addParty(Party party) {
     partyRepository.save(party);
   }

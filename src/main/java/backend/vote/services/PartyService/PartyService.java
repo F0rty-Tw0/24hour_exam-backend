@@ -10,6 +10,8 @@ public interface PartyService {
 
   public Party findPartyById(Long id);
 
+  public Party findPartyByAbbreviation(String abbreviation);
+
   public void addParty(Party party);
 
   public void updatePartyById(Long id, Party party);
