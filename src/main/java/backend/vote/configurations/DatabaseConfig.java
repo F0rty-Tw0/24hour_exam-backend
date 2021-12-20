@@ -121,13 +121,21 @@ public class DatabaseConfig implements CommandLineRunner {
     }
   }
 
+  private void addMunicipalitiesToParties() {
+    List<Municipality> municipalities = municipalityService.findAllMunicipalities();
+    List<Party> parties = partyService.findAllParties();
+    for (Party party : parties) {
+      party.setMunicipalities(municipalities);
+      partyService.updatePartyById(party.getId(), party);
+    }
+  }
 
-  //TODO: ADD MUNICIPALITY TO PARTY
   @Override
   public void run(String... args) throws Exception {
     createDanishMunicipalities();
     createParties();
     createCandidates();
     createElections();
+    addMunicipalitiesToParties();
   }
 }

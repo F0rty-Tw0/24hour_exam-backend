@@ -53,6 +53,7 @@ public class PartyServiceImpl implements PartyService {
     partyToUpdate.setName(party.getName());
     partyToUpdate.setSlogan(party.getSlogan());
     partyToUpdate.setAbbreviation(party.getAbbreviation());
+    partyToUpdate.setMunicipalities(party.getMunicipalities());
     partyRepository.save(partyToUpdate);
   }
 

@@ -1,6 +1,8 @@
 package backend.vote.entities;
 
-import java.util.Set;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,8 +34,9 @@ public class Party {
   @Column(unique = true)
   private String abbreviation;
 
+  @JsonIgnore
   @ManyToMany
-  private Set<Municipality> municipalities;
+  private List<Municipality> municipalities = new ArrayList<>();
 
   public Party(String name, String abbreviation, String slogan) {
     this.name = name;
